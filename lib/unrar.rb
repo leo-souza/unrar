@@ -32,7 +32,7 @@ module Unrar
       items = []
       cmdoutput = `#{Archive.unrar} lb #{self.file}`
       cmdoutput.each_line do |line|
-        items << line
+        items << line.strip
       end
       return items
     end
